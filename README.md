@@ -1,6 +1,6 @@
 # Ionic 3 and cordova project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
 # Description
 
@@ -17,10 +17,10 @@ This project makes use of the Cordova hybrid application framework. Also, Ionic 
 This application is developed by following Angular best practices.
  
 ## Requirements
-**NodeJS**: 12.18.3
-**npm**: 6.14.8
-**Ionic**: 3.20.1
-**Cordova**: 9.0.0
+* NodeJS: 12.18.3
+* npm: 6.14.8
+* Ionic: 3.20.1
+* Cordova: 9.0.0
 
 ## Screenshots
 
