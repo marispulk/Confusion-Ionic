@@ -1,61 +1,80 @@
 # Ionic 3 and cordova project
 
-This project is a part of the Coursera course **Multiplatform Mobile App Development with Web Technologies: [Ionic and Cordova]**
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
-Been outdated, I've decided to make this initial project repository that the students don't strugle with the dependencies (node, ionic and npm).
+# Description
 
-## Dependencies
+Confusion-Ionic is an app for a Confusion restaurant webpage, it features the following components:
+* Ionic Framework - [DONE]
+* Advanced features of Ionic lists - [DONE]
+* Forms, modals, popups, popovers, actions sheets, loading - [DONE]
+* Gestures - [TODO]
+* Ionic split pane, grid, storage, app deployment - [TODO]
+* Cordova and Ionic Native - [TODO]
 
-This project uses:
+This project makes use of the Cordova hybrid application framework. Also, Ionic framework (Ionic Ver 3.x), one of the most popular mobile application frameworks, that is built with mobile-optimized HTML5 and CSS based components and Angular. Project includes UI development with Ionic and then using Cordova's modules to access the native mobile platform's capabilities from Javascript. 
 
-| Name   | Version |
-| ------ | ------- |
-| ionic  | ^3.20.1 |
-| corova | ^9      |
+This application is developed by following Angular best practices.
+ 
+## Requirements
+**NodeJS**: 12.18.3
+**npm**: 6.14.8
+**Ionic**: 3.20.1
+**Cordova**: 9.0.0
 
-## Installation
+## Screenshots
 
-> You don't have to downgrade your **npm** or **NodeJS** versions.
->
-> Tested with:
->
-> - **NodeJS**: 12.18.3
-> - **npm**: 6.14.8
-> - **Ionic**: 3.20.1
-> - **cordove**: 9.0.0
+Home screen:
+![Home screen](https://i.imgur.com/yqlZPvT.png)
 
-1. Clone the project: `git clone https://github.com/belachkar/confusion-ionic.git`.
+About screen:
+![About screen](https://i.imgur.com/ggdRgqE.png)
 
-   If you want to change the name just add the name you want for the project at the end:
+Menu screen:
+![Menu screen](https://i.imgur.com/jvyc3qA.png)
 
-   `git clone https://github.com/belachkar/confusion-ionic.git confusion`.
+Contact page:
+![Contact screen](https://i.imgur.com/tr4ixfA.png)
 
-2. Change the directory:
-   - WIN: `cd .\confusion-ionic`.
-   - LINUX: `cd ./confusion-ionic`.
-3. Install the npm dependencies: `npm i`.
-4. For compatibility of commands for the rest of the lessons, may be you should install **ionic v3.20.1 globally** `npm i -g ionic@3`.
+Favorites screen:
+![Menu screen](https://i.imgur.com/bl4XO9h.png)
 
-If you have changed the project name you must also change it in these files:
+Reserve screen:
+![Contact page](https://i.imgur.com/jJU4dod.png)
 
-- `package.json`
-- `ionic.config.json`
-- `config.xml` in the **name** tag: `<name>confusion-ionic</name>`.
-- Drop the `package-lock.json` file, and run `npm i` to recreate it.
+## Development server
 
-## Errors fixation
+This project is created using JSON and Ionic server.
 
-Normally you shouldn't have any error, but if there is a problem installing `node-sass` (_Build error_):
+JSON:
+Files are found in folder: json-server.zip
+<br> 
+Run json-server for a dev server.
 
-1. Install **AS ADMINISTRATOR** `windows-build-tools` package globally: `npm --vs2015 install -g windows-build-tools`.
-2. Delete the `node_modules` folder.
-3. Delete the `package-lock.json` file.
-4. Reinstall the dependencies: `npm i`.
+Resources:
+<br> 
+http://localhost:3000/dishes
+<br> 
+http://localhost:3000/promotions
+<br> 
+http://localhost:3000/leaders
+<br> 
+http://localhost:3000/feedback
+<br> 
 
-> Please hit the **Star** at the top if you like the guidance project,
->
-> _I hope it helps_.
+Home:
+<br> 
+http://localhost:3000
 
-<!-- Links -->
-[Ionic and Cordova]: https://www.coursera.org/learn/ionic-cordova/lecture/gttD7/ionic-and-angular "Multiplatform Mobile App Development with Web Technologies: Ionic and Cordova"
-[windows-build-tools]: https://www.npmjs.com/package/windows-build-tools "windows-build-tools"
+IONIC:
+<br> 
+Run ionic serve --lab for a dev server.
+<br> 
+Navigate to:
+<br> 
+Lab: http://localhost:8200
+<br> 
+Local: http://localhost:8100
+
+The app will automatically reload if you change any of the source files. 
+
