@@ -12,7 +12,6 @@ Confusion-Ionic is an app for a Confusion restaurant webpage, it features the fo
 * Ionic split pane, grid, storage, app deployment - [TODO]
 * Cordova and Ionic Native - [TODO]
 
-<<<<<<< HEAD
 This project makes use of the Cordova hybrid application framework. Also, Ionic framework (Ionic Ver 3.x), one of the most popular mobile application frameworks, that is built with mobile-optimized HTML5 and CSS based components and Angular. Project includes UI development with Ionic and then using Cordova's modules to access the native mobile platform's capabilities from Javascript.
 
 This application is developed by following Angular best practices.
@@ -144,5 +143,5 @@ Lab: http://localhost:8200
 Local: http://localhost:8100
 
 The app will automatically reload if you change any of the source files.
->>>>>>> 34d52312b7e4ee87281f00278478e5b39f2e2144
+
 

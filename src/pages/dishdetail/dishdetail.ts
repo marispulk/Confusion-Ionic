@@ -1,8 +1,11 @@
 import { Component, Inject } from '@angular/core';
-import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { IonicPage, ModalController, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Dish } from "../../shared/dish";
 import { Comment } from "../../shared/comment";
 import { FavoriteProvider } from "../../providers/favorite/favorite";
+import { ActionSheetController } from 'ionic-angular'
+import { CommentPage } from '../comment/comment';
+
 
 /**
  * Generated class for the DishdetailPage page.
@@ -24,7 +27,12 @@ export class DishdetailPage {
   numcomments: number;
   favorite: boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public actionSheetController: ActionSheetController,
+    public modalCtrl: ModalController,
+
     @Inject('BaseURL') private BaseURL,
     private toastCtrl: ToastController,
     private favoriteservice: FavoriteProvider) {
@@ -49,4 +57,48 @@ export class DishdetailPage {
         duration: 3000
       }).present();
     }
+
+  /** Action sheet */
+
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      title: 'Select Actions',
+      buttons: [
+        {
+          text: 'Add to Favorites',
+          handler: () => {
+            this.addToFavorites();
+          }
+        },
+        {
+          text: 'Add Comment',
+          handler: () => {
+            this.openComment();
+
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+
+    actionSheet.present();
+  }
+
+  openComment() {
+    let modal = this.modalCtrl.create(CommentPage);
+    modal.present();
+    modal.onDidDismiss((commentForm) => {
+      if (commentForm)
+        this.dish.comments.push(commentForm);
+      });
+  }
 }
+
+
+
