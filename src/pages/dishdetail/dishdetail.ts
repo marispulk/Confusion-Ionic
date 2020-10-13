@@ -7,6 +7,7 @@ import { ActionSheetController } from 'ionic-angular'
 import { CommentPage } from '../comment/comment';
 
 
+
 /**
  * Generated class for the DishdetailPage page.
  *
@@ -27,11 +28,13 @@ export class DishdetailPage {
   numcomments: number;
   favorite: boolean = false;
 
+
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public actionSheetController: ActionSheetController,
     public modalCtrl: ModalController,
+
 
     @Inject('BaseURL') private BaseURL,
     private toastCtrl: ToastController,

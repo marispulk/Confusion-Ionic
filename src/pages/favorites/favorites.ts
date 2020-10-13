@@ -2,6 +2,9 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { IonicPage, NavController, NavParams, ItemSliding, ToastController, LoadingController, AlertController } from 'ionic-angular';
 import { FavoriteProvider } from "../../providers/favorite/favorite";
 import { Dish } from "../../shared/dish";
+import { Favorites } from "../../shared/favorites";
+import { Storage } from "@ionic/storage";
+
 /**
  * Generated class for the FavoritesPage page.
  *
@@ -19,11 +22,13 @@ export class FavoritesPage implements OnInit {
   favorites: Dish[];
   errMess: string;
 
+
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private favoriteservice: FavoriteProvider,
     private toastCtrl: ToastController,
     private loadingCtrl: LoadingController,
     private alertCtrl: AlertController,
+    private storage: Storage,
     @Inject('BaseURL') private BaseURL ){
     }
 
@@ -69,10 +74,11 @@ export class FavoritesPage implements OnInit {
           }
         }
       ]
+
     });
 
     alert.present();
 
-    item.close();
+    item.close()
   }
 }
