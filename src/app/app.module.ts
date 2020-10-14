@@ -36,7 +36,7 @@ import { LoginPage } from '../pages/login/login';
     FavoritesPage,
     ReservationPage,
     CommentPage,
-    LoginPage
+    LoginPage,
   ],
   imports: [
     BrowserModule,

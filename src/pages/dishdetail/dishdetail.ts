@@ -94,11 +94,11 @@ export class DishdetailPage {
   }
 
   openComment() {
-    let modal = this.modalCtrl.create(CommentPage);
-    modal.present();
-    modal.onDidDismiss((commentForm) => {
-      if (commentForm)
-        this.dish.comments.push(commentForm);
+    let modal = this.modalCtrl.create(CommentPage); // See loob esmalt modali, siis lisab Modali sisse comment page (HTML sisu)
+    modal.present(); // See toob modali nähtavale
+    modal.onDidDismiss((commentForm) => { // Commentit sulgedes kontrollitakse kas
+      if (commentForm) //commentFormis on andmed sees või suleti modal X nuputust.
+        this.dish.comments.push(commentForm); // Kui andmed on commentFormis olemas, siis pushitakse comment vastava dishi comments arraysse.
       });
   }
 }
