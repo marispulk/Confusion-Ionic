@@ -1,10 +1,10 @@
 import { Component, Inject } from '@angular/core';
 import { IonicPage, ModalController, NavController, NavParams, ToastController } from 'ionic-angular';
 import { Dish } from "../../shared/dish";
-import { Comment } from "../../shared/comment";
 import { FavoriteProvider } from "../../providers/favorite/favorite";
 import { ActionSheetController } from 'ionic-angular'
 import { CommentPage } from '../comment/comment';
+import { SocialSharing } from "@ionic-native/social-sharing";
 
 
 
@@ -34,11 +34,10 @@ export class DishdetailPage {
     public navParams: NavParams,
     public actionSheetController: ActionSheetController,
     public modalCtrl: ModalController,
-
-
     @Inject('BaseURL') private BaseURL,
     private toastCtrl: ToastController,
-    private favoriteservice: FavoriteProvider) {
+    private favoriteservice: FavoriteProvider,
+    private socialSharing: SocialSharing) {
       this.dish = navParams.get('dish');
       this.favorite = this.favoriteservice.isFavorite(this.dish.id)
       this.numcomments = this.dish.comments.length;
@@ -79,6 +78,26 @@ export class DishdetailPage {
             this.openComment();
 
           }
+        },
+        {
+          text: 'Share via Facebook',
+          handler: () => {
+            this.socialSharing.shareViaFacebook(
+              this.dish.name + ' -- ' + this.dish.description, // Text for the message
+              this.BaseURL + this.dish.image, '') // Image that you can share // '' is for URL to share
+                .then(() => console.log('Posted successfully to Facebook'))
+                .catch(() => console.log('Failed to post to Facebook'));
+              }
+        },
+        {
+          text: 'Share via Twitter',
+          handler: () => {
+            this.socialSharing.shareViaTwitter(
+              this.dish.name + ' -- ' + this.dish.description, // Text for the message
+              this.BaseURL + this.dish.image, '') // Image that you can share // '' is for URL to share
+                .then(() => console.log('Posted successfully to Facebook'))
+                .catch(() => console.log('Failed to post to Facebook'));
+              }
         },
         {
           text: 'Cancel',

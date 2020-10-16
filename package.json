@@ -23,12 +23,15 @@
     "@ionic-native/core": "4.20.0",
     "@ionic-native/email-composer": "^4.20.0",
     "@ionic-native/local-notifications": "^4.20.0",
+    "@ionic-native/social-sharing": "^4.12.0",
     "@ionic-native/splash-screen": "4.20.0",
     "@ionic-native/status-bar": "4.20.0",
     "@ionic/storage": "2.2.0",
     "cordova-android": "6.3.0",
     "cordova-plugin-email": "1.2.7",
+    "cordova-plugin-x-socialsharing": "5.6.8",
     "de.appplant.cordova.plugin.local-notification": "0.8.5",
+    "es6-promise-plugin": "4.2.2",
     "ionic-angular": "3.9.9",
     "ionicons": "3.0.0",
     "rxjs": "5.5.11",
@@ -57,10 +60,13 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-android-support-gradle-release": {
-        "ANDROID_SUPPORT_VERSION": "27.+"
+        "ANDROID_SUPPORT_VERSION": "24.+"
       },
       "de.appplant.cordova.plugin.local-notification": {},
-      "cordova-plugin-email": {}
+      "cordova-plugin-email": {},
+      "cordova-plugin-x-socialsharing": {
+        "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
+      }
     },
     "platforms": [
       "android"
