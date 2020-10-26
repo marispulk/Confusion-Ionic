@@ -5,12 +5,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 # Description
 
 Confusion-Ionic is an app for a Confusion restaurant webpage, it features the following components:
-* Ionic Framework - [DONE]
-* Advanced features of Ionic lists - [DONE]
-* Forms, modals, popups, popovers, actions sheets, loading - [DONE]
-* Gestures - [DONE]
-* Ionic split pane, grid, storage, app deployment - [DONE]
-* Cordova and Ionic Native - [DONE]
+* Ionic Framework
+* Advanced features of Ionic lists
+* Forms, modals, popups, popovers, actions sheets, loading
+* Gestures
+* Ionic split pane, grid, storage, app deployment
+* Cordova and Ionic Native
 
 This project makes use of the Cordova hybrid application framework. Also, Ionic framework (Ionic Ver 3.x), one of the most popular mobile application frameworks, that is built with mobile-optimized HTML5 and CSS based components and Angular. Project includes UI development with Ionic and then using Cordova's modules to access the native mobile platform's capabilities from Javascript.
 
