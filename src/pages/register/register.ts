@@ -76,4 +76,17 @@ export class RegisterPage {
     console.log(this.registerForm.value);
     this.dismiss();
   }
+
+  getFromLibrary() {
+   this.camera.getPicture({
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+      destinationType: this.camera.DestinationType.DATA_URL
+   }).then((res) => {
+     this.image = 'data: image/jpeg;base64,' + res;
+   }).catch(e => {
+     console.log(e);
+   })
+
+  }
+
 }
